@@ -58,17 +58,11 @@
             paramGas = paramGas == null ? "0" : paramGas;
             float gas = Float.parseFloat(paramGas);
             
-            if (gas == 0 || pa == 0) {
-%>
-
-<div class="alert alert-danger" role="alert">Coloque algum valor nos campos.</div>
-<%
-            } else {
               float qm = calcular(gas, pa);
               String resultado;
-              if (qm <= 0.7) {
+              if (qm >= 0.7) {
                 resultado = "Gasolina é melhor!";
-              } else{
+              }else{
                 resultado = "Álcool é melhor";
               }
               %>
@@ -76,9 +70,9 @@
 <div class="alert alert-success" role="alert">
 Resultado: <%out.print(resultado);%>
 </div>
-              <%
-            }
-            %>
+            
+            
+            
             <br>
           </div>
         </div>
