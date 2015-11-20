@@ -49,7 +49,7 @@
 											mvc.Combustivel calculoComb = (mvc.Combustivel) request.getAttribute("qm");
 						%>
 						<div class="alert alert-success" role="alert">
-							<br> <%=calculoComb.getResultado() %>
+							<br> ${qm.resultado}
 						</div>
 
 
